@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Truths</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "@google/genai": "https://esm.sh/@google/genai@^0.12.0",
+            "jspdf": "https://esm.sh/jspdf@^2.5.1"
+        }
+    }
+    </script>
+    <script type="module" src="index.tsx" defer></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <main id="app">
+        <header class="app-header">
+            <h1>Dark Truths</h1>
+            <p>Generate a 10-page PDF of motivational or dark reality memes based on your theme.</p>
+        </header>
+
+        <section class="input-section">
+            <div class="form-group">
+                <label for="api-key-input">Gemini API Key</label>
+                <input type="password" id="api-key-input" placeholder="Enter your API Key here" aria-label="Gemini API Key Input">
+            </div>
+
+            <div class="form-group">
+                <label for="theme-input">Theme or Topic</label>
+                <textarea id="theme-input" rows="3" placeholder="e.g., The illusion of success, The price of ambition, The loneliness of leadership..." aria-label="Theme or Topic Input"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button id="generate-btn">Generate Truths</button>
+                <button id="magic-btn">Magic ✨</button>
+            </div>
+        </section>
+        
+        <section id="status-container" class="status-container" aria-live="polite">
+            <div id="loader" class="loader-container" style="display: none;">
+                <div class="loader-orb"></div>
+                <p>Generating your truths... this may take a moment.</p>
+            </div>
+            <div id="output-container" style="display: none;"></div>
+        </section>
+    </main>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Dark Truths",
+  "description": "An entirely client-sided webapp for creating dark reality or motivational two-panel or split-image memes. The user provides their own Gemini API key to use the webapp.",
+  "requestFramePermissions": []
+}
